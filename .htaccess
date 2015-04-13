@@ -1,0 +1,8 @@
+# .htaccess additions for www.chrisdorros.com
+# hosted on nearylfreespeech.net
+#
+
+# redirect HTTP to HTTPS
+RewriteEngine on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
