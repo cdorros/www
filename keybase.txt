@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/cdorros
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.chrisdorros.com
+  * I am cdorros (https://keybase.io/cdorros) on keybase.
+  * I have a public key ASDnMD_Ss8gbzVU8Z8Ra-jO7kTWEnDKpTe5Z2gJDGZ6_GQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120e7303fd2b3c81bcd553c67c45afa33bb9135849c32a94dee59da0243199ebf190a",
+            "host": "keybase.io",
+            "kid": "0120e7303fd2b3c81bcd553c67c45afa33bb9135849c32a94dee59da0243199ebf190a",
+            "uid": "b64354931120337463d7c4a675ff4319",
+            "username": "cdorros"
+        },
+        "service": {
+            "hostname": "www.chrisdorros.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.14"
+    },
+    "ctime": 1460578872,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1460578679,
+        "hash": "d9d556f04a257eba6975de9c95a23b1b72fed69d9514b81686d068bb9b655fcf87c23597db8bab96d9867760963eabae03655c0f6102b30dfa14f5e3aec04f73",
+        "seqno": 441504
+    },
+    "prev": "ebfc663e00363e4c1bff9b4034f2f744b3841fe824378d4667f0de45f796664e",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5zA/0rPIG81VPGfEWvozu5E1hJwyqU3uWdoCQxmevxkKp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZTczMDNmZDJiM2M4MWJjZDU1M2M2N2M0NWFmYTMzYmI5MTM1ODQ5YzMyYTk0ZGVlNTlkYTAyNDMxOTllYmYxOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTczMDNmZDJiM2M4MWJjZDU1M2M2N2M0NWFmYTMzYmI5MTM1ODQ5YzMyYTk0ZGVlNTlkYTAyNDMxOTllYmYxOTBhIiwidWlkIjoiYjY0MzU0OTMxMTIwMzM3NDYzZDdjNGE2NzVmZjQzMTkiLCJ1c2VybmFtZSI6ImNkb3Jyb3MifSwic2VydmljZSI6eyJob3N0bmFtZSI6Ind3dy5jaHJpc2RvcnJvcy5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNCJ9LCJjdGltZSI6MTQ2MDU3ODg3MiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDYwNTc4Njc5LCJoYXNoIjoiZDlkNTU2ZjA0YTI1N2ViYTY5NzVkZTljOTVhMjNiMWI3MmZlZDY5ZDk1MTRiODE2ODZkMDY4YmI5YjY1NWZjZjg3YzIzNTk3ZGI4YmFiOTZkOTg2Nzc2MDk2M2VhYmFlMDM2NTVjMGY2MTAyYjMwZGZhMTRmNWUzYWVjMDRmNzMiLCJzZXFubyI6NDQxNTA0fSwicHJldiI6ImViZmM2NjNlMDAzNjNlNGMxYmZmOWI0MDM0ZjJmNzQ0YjM4NDFmZTgyNDM3OGQ0NjY3ZjBkZTQ1Zjc5NjY2NGUiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEB9xlrXMFzD3taLSdof5nhwREXayUHk3Sz9uT8eLRpvzAGszCAj3o08Rp/LiLOrYYHa7bpnH8gXZDjcmkmvOtkPqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cdorros
+
+==================================================================
