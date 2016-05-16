@@ -325,7 +325,7 @@ sup {
 <p>This page will contain information in preparation for my OSCON 2016 tutorial:<br>
 <a href="http://conferences.oreilly.com/oscon/open-source-us/public/schedule/detail/49043">Don&#39;t fix it. Throw it away! Introduction to disposable infrastructure</a></p>
 
-<p>I will add the tutorial steps right before the conference. For now, here&#39;s the prerequisites:</p>
+<p>I will add the tutorial steps right before the conference. For now, please work through the prerequisites and section 0.</p>
 
 <h2 id="toc_0">Prerequisites</h2>
 
@@ -337,7 +337,7 @@ sup {
 
 <h3 id="toc_2">Operating System</h3>
 
-<p>You are free to choose what you&#39;d like to run this software on. Linux - sure. Windows - go for it. If you&#39;re using a VM, make sure it can reach the Internet. Just note that I&#39;ll be doing the tutorial on a Mac.</p>
+<p>You are free to choose what you&#39;d like to run this software on. It will be much easier for both of us if you&#39;re on OS X or Linux though, as I haven&#39;t touched Windows in years. If you&#39;re using a VM, make sure it can reach the Internet. Note that I&#39;ll be doing the tutorial on a Mac.</p>
 
 <h3 id="toc_3">Software</h3>
 
@@ -349,7 +349,15 @@ sup {
 <li><a href="https://www.packer.io/downloads.html">Packer</a></li>
 </ul>
 
-<p>If you&#39;re on a Mac, note that most of these are available via &#39;brew&#39;.</p>
+<p>If you&#39;re on a Mac, note that most of these are available via &#39;brew&#39;:</p>
+
+<div><pre><code class="language-none">brew cask install virtualbox
+brew cask install vagrant
+brew install packer
+brew install terraform</code></pre></div>
+
+<p>Install the Ubuntu Trusty 64 box. <strong>This one is important to do before the session</strong>, as it&#39;s a large OS image file, and we don&#39;t want to overload the conference WiFi. (DoS Techniques is a different course number)
+<code>vagrant box add ubuntu/trusty64</code></p>
 
 <p>We&#39;ll use Puppet during the tutorial, but it isn&#39;t necessary to install this on your laptop as the HashiCorp tools support this.</p>
 
@@ -359,15 +367,35 @@ sup {
 <li><p><strong>Active AWS account</strong></p>
 
 <ul>
-<li>This is probably the most important pre-req! It&#39;s the most time consuming of all the setup.</li>
-<li>Take a look at the Free Tier (https://aws.amazon.com/free/). We will only spin
-up resources in AWS that are covered under the Free Tier</li>
+<li><strong>This is probably the most important pre-req!</strong> It&#39;s the most time consuming of all the setup.</li>
+<li>You can setup a fresh account - take a look at the Free Tier (https://aws.amazon.com/free/). We will try to spin up resources in AWS that are covered under the Free Tier - I can&#39;t guarantee there will be no costs associated with the activity, though (would be very minimal if there is)</li>
+<li>If you&#39;re reusing an existing account, that&#39;s fine, but just note that there may be some extra setup in the beginning for you. Also note that <strong>you&#39;re at your own risk</strong> with whichever account you decide to use, so you may want to create a fresh account just for the tutorial.</li>
 <li>Ensure your user account has privilege to create / manage AWS services</li>
-<li>IAM &quot;access key ID&quot; and &quot;secret access key&quot; for your user
+<li><strong>IAM &quot;access key ID&quot; and &quot;secret access key&quot; for your user</strong>
 (Getting Your Access Key ID and Secret Access Key)</li>
 </ul></li>
 <li><p><strong>github.com</strong> (optional but recommended)</p></li>
 </ul>
+
+<h2 id="toc_5">0. Get Setup</h2>
+
+<ol>
+<li>Ensure you have setup all the required tools and AWS pieces in the <a href="#prerequisites">Prequisites</a> section</li>
+<li>Install the Ubuntu Trusty 64-bit Vagrant box:<br>
+<code>vagrant box add ubuntu/trusty64</code></li>
+<li>Checkout <a href="">this github repo</a> to a place of your choosing. From here on we will refer to this path as [gh_repo].</li>
+<li>Upload your SSH key to AWS. In the GUI this is under EC2-&gt;Key Pairs. Note the name of the SSH key in AWS.</li>
+<li>Edit the terraform/variables.tf file to add the name of your SSH key, replacing &quot;your-key-name&quot;
+<em>Now We&#39;ll setup the networking components of AWS required for the tutorial (VPC, subnets, routing, etc). Don&#39;t worry so much about the Terraform commands at this point - we&#39;ll cover Terraform in more detail in section 3.</em></li>
+<li><code>cd terraform</code><br></li>
+<li>Set AWS credentials into environment variables
+<code>export AWS_ACCESS_KEY_ID=&#39;youraccesskeyid&#39;</code>
+<code>export AWS_SECRET_ACCESS_KEY=&#39;yoursecretkey&#39;</code></li>
+<li><code>terraform plan</code></li>
+<li><code>terraform apply</code>
+If this fails due to IP CIDR conflict, navigate in the GUI to &quot;VPC-&gt;Your VPC&quot; and &quot;VPC-&gt;Subnets&quot; and look for a free RFC-1918 range (172.16.0.0/12, 10.0.0.0/8, 192.168.0.0/16). Make sure the subnet is actually a subnet of the VPC range (in my config I&#39;m using 10.0.0.0/16 for the VPC and 10.0.1.0/24 and 10.0.2.0/24 as the two subnets.</li>
+<li><strong>Note down the VPC and Subnet IDs outputted at the end, we&#39;ll need these later</strong></li>
+</ol>
 
 
 
