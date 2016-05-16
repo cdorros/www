@@ -54,7 +54,7 @@ We'll use Puppet during the tutorial, but it isn't necessary to install this on 
 
 
 ## 0. Get Setup
-1. Ensure you have setup all the required tools and AWS pieces in the [Prequisites](#prerequisites) section
+1. Ensure you have setup all the required tools and AWS pieces in the Prerequisites section
 2. Install the Ubuntu Trusty 64-bit Vagrant box:  
    `vagrant box add ubuntu/trusty64`
 3. Checkout [this github repo](https://github.com/cdorros/oscon2016) to a place of your choosing. From here on we will refer to this path as [gh_repo].
