@@ -57,7 +57,7 @@ We'll use Puppet during the tutorial, but it isn't necessary to install this on 
 1. Ensure you have setup all the required tools and AWS pieces in the [Prequisites](#prerequisites) section
 2. Install the Ubuntu Trusty 64-bit Vagrant box:  
    `vagrant box add ubuntu/trusty64`
-3. Checkout [this github repo]() to a place of your choosing. From here on we will refer to this path as [gh_repo].
+3. Checkout [this github repo](https://github.com/cdorros/oscon2016) to a place of your choosing. From here on we will refer to this path as [gh_repo].
 4. Upload your SSH key to AWS. In the GUI this is under EC2->Key Pairs. Note the name of the SSH key in AWS.
 5. Edit the terraform/variables.tf file to add the name of your SSH key, replacing "your-key-name"
 *Now We'll setup the networking components of AWS required for the tutorial (VPC, subnets, routing, etc). Don't worry so much about the Terraform commands at this point - we'll cover Terraform in more detail in section 3.*
