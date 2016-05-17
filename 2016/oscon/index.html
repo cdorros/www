@@ -322,10 +322,15 @@ sup {
       ga('send', 'pageview');
 </script>
 
-<p>This page will contain information in preparation for my OSCON 2016 tutorial:<br>
+<p>This page contains the instructions and general information for my OSCON 2016 tutorial:<br>
 <a href="http://conferences.oreilly.com/oscon/open-source-us/public/schedule/detail/49043">Don&#39;t fix it. Throw it away! Introduction to disposable infrastructure</a></p>
 
-<p>I will add the tutorial steps right before the conference. For now, please work through the prerequisites and section 0.</p>
+<p><a href="https://www.surveymonkey.com/r/ZKKYJHT">Please complete this survey after the course! Thanks!</a></p>
+
+<ul>
+<li><strong>Slides</strong>: coming soon</li>
+<li>I plan to leave this site up after the course in case you want to use the tutorial again later.</li>
+</ul>
 
 <h2 id="toc_0">Prerequisites</h2>
 
@@ -379,7 +384,7 @@ brew install terraform</code></pre></div>
 <li><strong>This is probably the most important pre-req!</strong> It&#39;s the most time consuming of all the setup.</li>
 <li>You can setup a fresh account - take a look at the Free Tier (https://aws.amazon.com/free/). We will try to spin up resources in AWS that are covered under the Free Tier - I can&#39;t guarantee there will be no costs associated with the activity, though (would be very minimal if there is)</li>
 <li>If you&#39;re reusing an existing account, that&#39;s fine, but just note that there may be some extra setup in the beginning for you. Also note that <strong>you&#39;re at your own risk</strong> with whichever account you decide to use, so you may want to create a fresh account just for the tutorial.</li>
-<li>Ensure your user account has privilege to create / manage AWS services</li>
+<li>Ensure your user account has privilege to create / manage AWS services (in IAM-&gt;Users-&gt;youruser-&gt;Permissions-&gt;Attach Policy-&gt;Administrator Access)</li>
 <li><strong>IAM &quot;access key ID&quot; and &quot;secret access key&quot; for your user</strong>
 (Getting Your Access Key ID and Secret Access Key)</li>
 </ul></li>
@@ -442,16 +447,18 @@ You should see the default nginx page</p></li>
 <ol>
 <li><code>cd [gh_repo]/packer</code></li>
 <li>Open &quot;variables.json&quot; and add the values for aws_vpc_id and aws_subnet_id that we saved during the setup. For the subnet ID you can pick either one here, it&#39;s just where the AMI will be built.</li>
-<li>Set AWS credentials into environment variables (if not already done)
+<li><p>Set AWS credentials into environment variables (if not already done)
 <code>export AWS_ACCESS_KEY_ID=&#39;youraccesskeyid&#39;</code>
-<code>export AWS_SECRET_ACCESS_KEY=&#39;yoursecretkey&#39;</code></li>
-<li>Let&#39;s test out our AWS setup by building a plain Ubuntu 14.04 AMI
+<code>export AWS_SECRET_ACCESS_KEY=&#39;yoursecretkey&#39;</code></p>
+
+<p>If you&#39;re using Windows, you can add these directly to the variables.tf file <a href="https://www.terraform.io/docs/providers/aws/index.html">see example here</a>. <strong>Be careful though</strong>, you don&#39;t want to check this into source control!</p></li>
+<li><p>Let&#39;s test out our AWS setup by building a plain Ubuntu 14.04 AMI
 <code>packer validate -var-file=variables.json app.json</code>
 <code>packer build -var-file=variables.json app.json</code><br>
-This should spit out an AMI ID at the end if successful.</li>
-<li>Now we tell Packer to apply our Puppet config during build.<br>
+This should spit out an AMI ID at the end if successful.</p></li>
+<li><p>Now we tell Packer to apply our Puppet config during build.<br>
 Add the following to variables.json: (mind the commas)
-<code>&quot;puppet_manifest_file&quot;: &quot;../puppet/manifests/app.pp&quot;</code></li>
+<code>&quot;puppet_manifest_file&quot;: &quot;../puppet/manifests/app.pp&quot;</code></p></li>
 <li><p>Update the contents of the app.json file to look like the code below. Notice we added the &quot;provisioners&quot; block.</p>
 
 <div><pre><code class="language-none">{

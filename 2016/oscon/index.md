@@ -8,10 +8,13 @@
       ga('send', 'pageview');
 </script>
 
-This page will contain information in preparation for my OSCON 2016 tutorial:  
+This page contains the instructions and general information for my OSCON 2016 tutorial:  
 [Don't fix it. Throw it away! Introduction to disposable infrastructure](http://conferences.oreilly.com/oscon/open-source-us/public/schedule/detail/49043)
 
-I will add the tutorial steps right before the conference. For now, please work through the prerequisites and section 0.
+[Please complete this survey after the course! Thanks!](https://www.surveymonkey.com/r/ZKKYJHT)
+
+* **Slides**: coming soon
+* I plan to leave this site up after the course in case you want to use the tutorial again later.
 
 ## Prerequisites
 The following are the prerequisites for the course. PLEASE come to the course with all of this sorted out. Don't hesitate to contact me with questions. It's a short lesson, so we don't have time to spend playing IT admin.
@@ -55,7 +58,7 @@ We'll use Puppet during the tutorial, but it isn't necessary to install this on 
   - **This is probably the most important pre-req!** It's the most time consuming of all the setup.
   - You can setup a fresh account - take a look at the Free Tier (https://aws.amazon.com/free/). We will try to spin up resources in AWS that are covered under the Free Tier - I can't guarantee there will be no costs associated with the activity, though (would be very minimal if there is)
   - If you're reusing an existing account, that's fine, but just note that there may be some extra setup in the beginning for you. Also note that **you're at your own risk** with whichever account you decide to use, so you may want to create a fresh account just for the tutorial.
-  - Ensure your user account has privilege to create / manage AWS services
+  - Ensure your user account has privilege to create / manage AWS services (in IAM->Users->youruser->Permissions->Attach Policy->Administrator Access)
   - **IAM "access key ID" and "secret access key" for your user**
     (Getting Your Access Key ID and Secret Access Key)
 
@@ -115,6 +118,8 @@ In this step we are going to spin up a new Vagrant box, using Ubuntu 14.04, and 
 3. Set AWS credentials into environment variables (if not already done)
 	`export AWS_ACCESS_KEY_ID='youraccesskeyid'`
 	`export AWS_SECRET_ACCESS_KEY='yoursecretkey'`
+	
+	If you're using Windows, you can add these directly to the variables.tf file [see example here](https://www.terraform.io/docs/providers/aws/index.html). **Be careful though**, you don't want to check this into source control!
 4. Let's test out our AWS setup by building a plain Ubuntu 14.04 AMI
    ```packer validate -var-file=variables.json app.json```
    ```packer build -var-file=variables.json app.json```  
