@@ -13,7 +13,7 @@ This page contains the instructions and general information for my OSCON 2016 tu
 
 [Please complete this survey after the course! Thanks!](https://www.surveymonkey.com/r/ZKKYJHT)
 
-* **Slides**: coming soon
+* **Slides**: [PPTX](2016-oscon-disposable.pptx) [PDF](2016-oscon-disposable.pdf)
 * I plan to leave this site up after the course in case you want to use the tutorial again later.
 
 ## Prerequisites
