@@ -18,36 +18,36 @@ we got stuck together
 <img src="images/ballpit-crop.jpg" width="500px">
 
 we were silly often  
-<img src="images/captain_underpants.jpg" width="500px">
+<img src="images/captain-underpants.jpg" width="500px">
 
 we were serious ocassionally  
-<img src="images/IMG_7181.JPG" width="500px">
-<img src="images/IMG_7008.jpg" width="500px">
+<img src="images/nflx-lemur-talk.jpg" width="500px">
+<img src="images/offsite.jpg" width="500px">
 
 we burned our eyes out together  
-<img src="images/seceng-eclipse-1.jpg" width="500px">
+<img src="images/seceng-eclipse.jpg" width="500px">
 
 we sweat together  
-<img src="images/image3.jpeg" width="500px">
-<img src="images/IMG_8168.jpg" width="500px">
+<img src="images/barrys.jpeg" width="500px">
+<img src="images/run-club.jpg" width="500px">
 
 we all woke up to this one fine day  
-<img src="images/acquisition.PNG" width="500px">
+<img src="images/acquisition.png" width="500px">
 
 we learned how to Cisco telepresence  
-<img src="images/tp1.jpg" width="500px">
-<img src="images/tp2.jpg" width="500px">
+<img src="images/telepresence-1.jpg" width="500px">
+<img src="images/telepresence-2.jpg" width="500px">
 
 we cooked together  
-<img src="images/upload9.jpg" width="500px">
+<img src="images/cooking-school.jpg" width="500px">
 
 
 but most of all, we learned how unstoppable we are when we come together.
-<img src="images/otod.JPG" width="500px">
+<img src="images/one-team-one-dream.jpg" width="500px">
 
 
 --chris
 
 p.s.
 how engineers use a dancefloor  
-<img src="images/IMG_7090.jpg" width="500px">
+<img src="images/dancefloor.jpg" width="500px">
