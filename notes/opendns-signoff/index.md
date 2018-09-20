@@ -20,7 +20,7 @@ we got stuck together
 we were silly often  
 <img src="images/captain-underpants.jpg" width="500px">
 
-we were serious ocassionally  
+we were serious occasionally  
 <img src="images/nflx-lemur-talk.jpg" width="500px">
 <img src="images/offsite.jpg" width="500px">
 
@@ -49,5 +49,5 @@ but most of all, we learned how unstoppable we are when we come together.
 --chris
 
 p.s.
-how engineers use a dancefloor  
+how engineers use a dance floor  
 <img src="images/dancefloor.jpg" width="500px">
